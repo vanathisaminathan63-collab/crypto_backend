@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const marketWs = createMarketWebSocket(server);
 const liveWs = createLiveWebSocket(server);
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`Crypto Backend API running on port ${PORT}`);
   console.log(`Health check: http://localhost:${PORT}/api/health`);
   console.log(`Market WebSocket: ws://localhost:${PORT}/ws/market`);
